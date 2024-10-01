@@ -1,0 +1,48 @@
+@mixin rounded($radius, $important: false) {
+  border-radius: $radius / 10 + rem if($important, !important, null);
+}
+
+// @include border(value, style, !important)
+@mixin border($width, $style, $important: false) {
+  border: $width + px $style if($important, !important, null);
+}
+
+// @include flex-all(flex, flex-start , space-between)
+@mixin flex-all($flex, $align-items, $justify-content: null) {
+  display: $flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// @include background-image("example.png", no-repeat, $size: 100%)
+// Note: '!important' not gonna work here
+$imagePath: "~assets/images";
+@mixin background-image(
+  $img,
+  $repeat: null,
+  $position: null,
+  $size: null,
+  $attachment: null
+) {
+  background-image: url("#{$imagePath}/#{$img}");
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+  background-attachment: $attachment;
+}
+
+// @include truncate(value);
+@mixin truncate($line-clamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  line-break: anywhere;
+  @apply overflow-hidden;
+}
+
+// @include transition
+@mixin transition {
+  @apply transition-all;
+  @apply duration-300;
+  @apply ease-in-out;
+}

@@ -1,0 +1,71 @@
+@import "../../src/assets/scss/partials/partials";
+
+.login__wrapper {
+  @apply w-lvw;
+  @apply h-lvh;
+  .login__container {
+    @apply bg-secondary;
+    @include flex-all(flex, center);
+    .login_left_section {
+      @apply w-[calc(100%-500px)];
+      @apply h-lvh;
+      @include flex-all(flex, center, center);
+    }
+    .login_right_section {
+      @apply w-[500px];
+      @apply h-lvh;
+      @apply bg-white;
+      @apply py-5 px-14;
+      @include flex-all(flex, center, center);
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      h1 {
+        @apply text-4xl;
+        @apply font-secondary;
+        @apply text-center;
+        @apply font-semibold;
+        @apply mb-0.5;
+        @apply text-primary-100;
+      }
+      .short_content {
+        @apply italic;
+        @apply font-secondary;
+        @apply text-xxs;
+        @apply text-primary-200;
+        @apply text-center;
+        @apply block;
+        @apply mb-2;
+      }
+      .success_msg {
+        @apply text-sm;
+        @apply block;
+        @apply text-center;
+        @apply mt-2;
+      }
+      form {
+        @apply w-full;
+      }
+      .form_group:not(:last-of-type) {
+        @apply mb-3;
+        @apply pb-2;
+      }
+      .form_control {
+        @apply w-full;
+      }
+      .login_btn {
+        @apply h-12;
+        @apply w-full;
+        @apply text-lg;
+        @apply uppercase;
+        @apply rounded;
+        @apply font-semibold;
+        @apply mt-7;
+        @apply font-primary;
+        &.btn_disabled {
+          @apply pointer-events-none;
+          @apply cursor-default;
+        }
+      }
+    }
+  }
+}

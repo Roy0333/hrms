@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 62.5%;
+  @apply antialiased;
+  @apply font-primary;
+}
+
+.form_group {
+  label {
+    @apply w-full;
+    @apply inline-block;
+    @apply text-md;
+    @apply font-medium;
+    @apply font-primary;
+    @apply mb-2;
+  }
+  .form_control {
+    @apply border border-primary-200;
+    @apply rounded-sm;
+    @apply px-2 pb-1;
+    @apply h-10;
+    @apply text-md;
+    &:focus {
+      @apply outline-none;
+      @apply shadow-md;
+    }
+  }
+}
+
+.btn_primary {
+  @apply bg-primary-100;
+  @apply text-white;
+  @apply transition-all;
+  &:hover {
+    @apply bg-primary;
+  }
+}

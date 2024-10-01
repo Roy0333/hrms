@@ -1,0 +1,5 @@
+@import "../../assets/scss/partials/partials";
+
+.header_cont {
+  @include flex-all(flex, center, space-between);
+}
