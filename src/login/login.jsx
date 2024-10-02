@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./login.scss";
 import { useState } from "react";
 
@@ -7,29 +8,34 @@ const Login = () => {
   let [passMsg, setpassMsg] = useState("");
   let [loginCount, setloginCount] = useState(1);
   let [buttonDiasble, setbuttonDiasble] = useState(false);
+  const nevigate = useNavigate();
 
   function loginSubmit() {
     localStorage.setItem("userName", userName);
     localStorage.setItem("password", password);
     if (userName === "Akash" && password === "0333") {
-      console.log("You are logged in");
+      // console.log("You are logged in");
       setpassMsg("You're Successfuly Logged In");
-      localStorage.setItem("isLoggedin", true);
+      localStorage.setItem("isLoggedin", "true");
+      nevigate("/");
+      window.location.reload();
     } else if (userName === "" && password === "") {
-      console.log("Please Enter Credentials");
+      // console.log("Please Enter Credentials");
       setpassMsg("Please Enter Credentials");
-      localStorage.setItem("isLoggedin", false);
+      // localStorage.setItem("isLoggedin", "false");
+      localStorage.removeItem("isLoggedin");
     } else {
-      console.log("Please check your username and password");
+      // console.log("Please check your username and password");
       setpassMsg("Please check your Credentials");
+      localStorage.clear();
     }
   }
   const loginTryCounter = () => {
     setloginCount(loginCount + 1);
-    console.log(loginCount);
+    // console.log(loginCount);
     if (loginCount === 3) {
       setbuttonDiasble(true);
-      console.log("You've tried 3times");
+      // console.log("You've tried 3times");
     }
   };
 

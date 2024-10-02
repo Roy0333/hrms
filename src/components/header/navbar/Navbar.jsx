@@ -1,5 +1,17 @@
+import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 
 export const Navbar = () => {
-  return <h1>Header works!</h1>;
+  return (
+    <nav>
+      <ul>
+        <li>
+          <NavLink to="/">Dashboard</NavLink>
+        </li>
+        <li>
+          <NavLink to="/employee">Employee</NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 };
