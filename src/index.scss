@@ -2,12 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
+  @apply m-0;
+  @apply p-0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  @apply box-border;
+}
+html {
+  @apply font-normal;
+  font-style: normal;
   font-size: 62.5%;
+  @apply scroll-smooth;
+  @apply font-primary;
+}
+body {
   @apply antialiased;
   @apply font-primary;
 }
+a {
+  text-decoration: none;
+}
+p {
+  @apply mb-0;
+}
+ul,
+li {
+  @apply list-none;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  @apply bg-transparent;
+  background-image: none;
+  @apply text-black;
+}
+figure {
+  @apply m-0;
+}
+svg,
+img {
+  @apply max-w-full;
+  @apply h-auto;
+}
 
+// Common Button styles
+.btn_primary {
+  @apply bg-primary-100;
+  @apply text-white;
+  @apply transition-all;
+  &:hover {
+    @apply bg-primary;
+  }
+}
+
+// Form Control page Css
 .form_group {
   label {
     @apply w-full;
@@ -27,14 +76,5 @@ body {
       @apply outline-none;
       @apply shadow-md;
     }
-  }
-}
-
-.btn_primary {
-  @apply bg-primary-100;
-  @apply text-white;
-  @apply transition-all;
-  &:hover {
-    @apply bg-primary;
   }
 }
