@@ -91,7 +91,7 @@ export default {
         "Times",
         "serif",
       ],
-      primary: ["Josefin Sans", "sans-serif"],
+      primary: ["Lato", "sans-serif"],
       secondary: ["Tinos", "serif"],
       icomoon: ["icomoon"],
     },
