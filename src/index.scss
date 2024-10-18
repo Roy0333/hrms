@@ -50,7 +50,7 @@ img {
 .btn_primary {
   @apply bg-primary-100;
   @apply text-white;
-  @apply transition-all;
+  // @apply transition-all;
   &:hover {
     @apply bg-primary;
   }
