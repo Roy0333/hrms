@@ -1,0 +1,25 @@
+.nav_menu_container{
+    .menu_items{
+        @apply mb-2;
+        a{
+            @apply bg-white;
+            @apply rounded-xl;
+            @apply w-full;
+            @apply px-4;
+            @apply py-1;
+            @apply inline-block;
+            @apply text-base;
+            @apply font-primary;
+            @apply font-medium;
+            @apply transition-all;
+            &:hover{
+                @apply bg-primary-200;
+                @apply text-white;
+            }
+            &.active{
+                @apply bg-primary-200;
+                @apply text-white;
+            }
+        }
+    }
+}

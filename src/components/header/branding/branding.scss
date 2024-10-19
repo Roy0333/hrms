@@ -1,0 +1,7 @@
+@import "../src/assets/scss/partials/partials";
+
+
+.branding_logo{
+    @include flex-all(flex, center, center);
+    @apply mb-8;
+}

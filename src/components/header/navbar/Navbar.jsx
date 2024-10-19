@@ -3,12 +3,12 @@ import "./navbar.scss";
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="nav_wrap">
+      <ul className="nav_menu_container">
+        <li className="menu_items">
           <NavLink to="/">Dashboard</NavLink>
         </li>
-        <li>
+        <li className="menu_items">
           <NavLink to="/employee">Employee</NavLink>
         </li>
       </ul>

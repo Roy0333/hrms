@@ -1,5 +1,8 @@
 @import "../../assets/scss/partials/partials";
 
-.header_cont {
-  @include flex-all(flex, center, space-between);
+.header_wrap {
+  @apply h-full;
+  @apply bg-primary-300;
+  @apply rounded-e-xl;
+  @apply py-6 px-5;
 }

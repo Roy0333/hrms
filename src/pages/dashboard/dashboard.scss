@@ -1,0 +1,13 @@
+@import "../../assets/scss/partials/partials";
+
+.dashboard_wrap {
+    @include flex-all(flex, center, center);
+    @apply h-full;
+  h2 {
+    @apply text-primary-100;
+    @apply text-4xl;
+    @apply font-semibold;
+    @apply font-secondary;
+    @apply italic;
+  }
+}

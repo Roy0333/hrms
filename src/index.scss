@@ -50,7 +50,7 @@ img {
 .btn_primary {
   @apply bg-primary-100;
   @apply text-white;
-  // @apply transition-all;
+  @apply transition-all;
   &:hover {
     @apply bg-primary;
   }
@@ -76,5 +76,27 @@ img {
       @apply outline-none;
       @apply shadow-md;
     }
+  }
+}
+
+// Layout Css
+.main_block {
+  @apply flex;
+  @apply justify-center;
+  @apply h-lvh;
+  .left_block {
+    @apply w-[270px];
+    @apply h-full;
+  }
+  .right_block {
+    @apply w-[calc(100%-270px)];
+    @apply px-6 py-4;
+  }
+  .content_block {
+    @apply h-[calc(100%-100px)];
+    @apply p-5;
+    @apply mt-5;
+    @apply rounded-lg;
+    @apply bg-[#F2F2F2];
   }
 }

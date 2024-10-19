@@ -43,7 +43,7 @@ const Login = () => {
     <div className="login__wrapper">
       <div className="login__container">
         <div className="login_left_section">
-          <img src="(../../src/assets/images/loginPage-img.png"></img>
+          <img src="../../src/assets/images/loginPage-img.png"></img>
         </div>
         <div className="login_right_section">
           <form>

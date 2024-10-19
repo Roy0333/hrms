@@ -5,11 +5,9 @@ import "./header.scss";
 export const Header = () => {
   return (
     <header className="header_wrap">
-      <div className="container">
-        <div className="header_cont">
-          <Branding />
-          <Navbar />
-        </div>
+      <div className="header_cont">
+        <Branding />
+        <Navbar />
       </div>
     </header>
   );
